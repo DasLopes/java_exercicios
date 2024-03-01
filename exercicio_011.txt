@@ -1,0 +1,45 @@
+/*
+Com base na tabela abaixo, escreva um programa que leia o código de um item e a quantidade deste item. A 
+seguir, calcule e mostre o valor da conta a pagar.
+*/
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		System.out.println(
+				"-----------------------------------------------\n"
+				+ "CODIGO\t\tESPECIFICAÇÃO\t\tPREÇO\n"
+				+ "-----------------------------------------------\n"
+				+ "1\t\tCachorro Quente\t\tR$ 4.00\n"
+				+ "2\t\tX-Salada\t\tR$ 4.50\n"
+				+ "3\t\tX-Bacon\t\t\tR$ 5.00\n"
+				+ "4\t\tTorradas simples\tR$ 2.00\n"
+				+ "5\t\tRefrigerante\t\tR$ 1.50\n\n"
+				+ "-----------------------------------------------\n");
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner (System.in);
+		int codigo = sc.nextInt();
+		int quatidade = sc.nextInt();
+		double saida = 0.0;
+		
+		if (codigo == 1) {
+			saida = quatidade * 4.0;
+		}else if(codigo == 2) {
+			saida = quatidade * 4.50;
+		}else if(codigo == 3) {
+			saida = quatidade * 5.0;
+		}else if(codigo == 4) {
+			saida = quatidade * 2.0;
+		}else if(codigo == 5) {
+			saida = quatidade * 1.50;
+		}
+		
+		System.out.printf("Total: R$ %.2f", saida);
+		sc.close();
+	}
+}
