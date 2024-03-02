@@ -25,21 +25,33 @@ public class Main {
 		Scanner sc = new Scanner (System.in);
 		int codigo = sc.nextInt();
 		int quatidade = sc.nextInt();
-		double saida = 0.0;
 		
-		if (codigo == 1) {
-			saida = quatidade * 4.0;
-		}else if(codigo == 2) {
-			saida = quatidade * 4.50;
-		}else if(codigo == 3) {
-			saida = quatidade * 5.0;
-		}else if(codigo == 4) {
-			saida = quatidade * 2.0;
-		}else if(codigo == 5) {
-			saida = quatidade * 1.50;
+		
+		switch (codigo) {
+		case 1: {			
+			System.out.printf("Total: R$ %.2f", quatidade * 4.0);
+			break;
 		}
-		
-		System.out.printf("Total: R$ %.2f", saida);
+		case 2:{
+			System.out.printf("Total: R$ %.2f", quatidade * 4.50);
+			break;
+		}
+		case 3:{
+			System.out.printf("Total: R$ %.2f", quatidade * 5.0);
+			break;
+		}
+		case 4:{
+			System.out.printf("Total: R$ %.2f", quatidade * 2.0);
+			break;
+		}
+		case 5:{
+			System.out.printf("Total: R$ %.2f", quatidade * 1.5);
+			break;
+		}
+		default:
+			System.out.println("Opção inválida");
+			break;			
+		}
 		sc.close();
 	}
 }
