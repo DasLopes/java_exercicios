@@ -1,6 +1,6 @@
 package entities;
 
-public class NotasAno {
+public class Student {
 	public String nome;
 	public double primeiraNota;
 	public double segundaNota;
